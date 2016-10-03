@@ -37,23 +37,23 @@ var title=data.title;
 var heading =data.heading;
 var content=data.content;
 
-var htmlTemplate='<!DOCTYPE html><html><head><title> '+title+'</title>\
-                <link href="/ui/style.css" rel="stylesheet" />\
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-                </head>\
-                <body>\
-                <div class="container">\
-                <div>\
-                <a href="/"><h5>Home </h5></a>\
-                </div>\
-                <hr/>\
-                <h3>\
-                '+heading+'\
-                </h3>\
-                <p>'+content+' </p>\
-                </div>\
-                </body>\
-                </html>'
+var htmlTemplate=`<!DOCTYPE html><html><head><title> ${title}</title>
+                <link href="/ui/style.css" rel="stylesheet" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                <div class="container">
+                <div>
+                <a href="/"><h5>Home </h5></a>
+                </div>
+                <hr/>
+                <h3>
+                ${heading}
+                </h3>
+                <p>${content} </p>
+                </div>
+                </body>
+                </html>`
                 ;
                 return htmlTemplate;
 };
