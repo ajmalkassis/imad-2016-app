@@ -9,15 +9,27 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-var content={
+var article={
+content={
     title: "Article-one the first",
     heading: "Article- one",
     date: "Sep 30",
-    content: '<p>This text shows the boxy of an html page</p>'
+    content: '<p>This text shows the body of an html page</p>'
        
+},
+content2={
+    title: "Article-two the second",
+    heading: "Article- two",
+    date: "Sep 6",
+    content: '<p>This text shows the body of an html page</p>'
+},
+content3={
+    title: "Article-three the third",
+    heading: "Article- three",
+    date: "Sep 8",
+    content: '<p>This text shows the body of an html page</p>'
+}
 };
-
 var createTemplate=function(data)
 {
     
