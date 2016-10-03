@@ -21,9 +21,13 @@ btn.onclick=function()
       }
       
   }
-  //render the variable in correct span
+ 
 
 };
+
+var nameInput=document.getElementById("sample");
+var name=nameInput.value;
+var submit=document.
 
 // //change the text of help div
 // // var element=document.getElementById("help");
