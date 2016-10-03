@@ -58,6 +58,7 @@ var htmlTemplate='<!DOCTYPE html><html><head><title> '+title+'</title>\
                 return htmlTemplate;
 };
 app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;
   res.send(createTemplate(article[articleName]));
 });
 
