@@ -14,8 +14,11 @@ var moveRight=function()
     img.style.marginLeft=marginLeft+'px';
     
 }
-
-img.onclick=function()
+img.off('click').on('click',function()
 {
     var interval=setInterval(moveRight,50);
-}
+});
+// img.onclick=function()
+// {
+//     var interval=setInterval(moveRight,50);
+// }
