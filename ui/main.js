@@ -7,7 +7,15 @@ element.innerHTML="this is the changed text";
 
 //move the img
 var img=document.getElementById("img");
+var marginLeft=0;
+var moveRight=function()
+{
+    marginLeft=marginLeft+10;
+    img.style.marginLeft=marginLeft+'px';
+    
+}
+
 img.onclick=function()
 {
-    img.style.marginLeft='100px';
+    var interval=setInterval(moveRight,100);
 }
