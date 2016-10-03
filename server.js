@@ -14,15 +14,8 @@ var content={
     title: "Article-one the first",
     heading: "Article- one",
     date: "Sep 30",
-    content: '<div class="container">\
-        <div>\
-            <a href="/"><h5>Home </h5></a>\
-        </div>\
-        <hr/>\
-        <h3>Article One</h3>\
-        <p>This text shows the boxy of an html page</p>\
-    </div>'
-        
+    content: '<div class="container"><div><a href="/"><h5>Home </h5></a></div><hr/><h3>Article One</h3><p>This text shows the boxy of an html page</p></div>'
+       
 };
 
 var createTemplate=function(data)
@@ -32,10 +25,7 @@ var title=data.title;
 var heading =data.heading;
 var content=data.content;
 
-var htmlTemplate='<!DOCTYPE html>\
-                <html>\
-                <head>\
-                <title> ${title} </title>\
+var htmlTemplate='<!DOCTYPE html><html><head><title> '+title+'</title>\
                 <link href="/ui/style.css" rel="stylesheet" />\
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">\
                 </head>\
@@ -46,9 +36,9 @@ var htmlTemplate='<!DOCTYPE html>\
                 </div>\
                 <hr/>\
                 <h3>\
-                ${heading}\
+                '+heading+'\
                 </h3>\
-                <p>${content} </p>\
+                <p>'+content+' </p>\
                 </div>\
                 </body>\
                 </html>'
