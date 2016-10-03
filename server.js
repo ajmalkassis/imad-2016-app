@@ -10,20 +10,20 @@ app.get('/', function (req, res) {
 });
 
 var article={
-content={
+'article-one':{
     title: "Article-one the first",
     heading: "Article- one",
     date: "Sep 30",
     content: '<p>This text shows the body of an html page</p>'
        
 },
-content2={
+'article-two':{
     title: "Article-two the second",
     heading: "Article- two",
     date: "Sep 6",
     content: '<p>This text shows the body of an html page</p>'
 },
-content3={
+'article-three':{
     title: "Article-three the third",
     heading: "Article- three",
     date: "Sep 8",
@@ -57,17 +57,10 @@ var htmlTemplate='<!DOCTYPE html><html><head><title> '+title+'</title>\
                 ;
                 return htmlTemplate;
 };
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(content));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(article[articleName]));
 });
 
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
