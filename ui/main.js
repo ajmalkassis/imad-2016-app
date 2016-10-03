@@ -31,7 +31,7 @@ var name=nameInput.value;
 var submit=document.getElementById("btn");
 submit.onclick=function()
 {
-    
+    var name=nameInput.value;
     
     var request=new XMLHttpRequest();
   //capture the response
