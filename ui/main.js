@@ -11,7 +11,7 @@ btn.onclick=function()
   //render the variable in correct span
   counter+=1;
   var sp=document.getElementById("count");
-  sp.innerHTML=sp;
+  sp.innerHTML=counter.toString();
 };
 
 // //change the text of help div
