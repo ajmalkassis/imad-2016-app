@@ -31,14 +31,32 @@ var name=nameInput.value;
 var submit=document.getElementById("btn");
 submit.onclick=function()
 {
-  //should make a request to the server and send the name
-  // capture the response of list containing name and render it to the page
-  var names=['name1','name2','name4'];
+    
+    
+    var request=new XMLHttpRequest();
+  //capture the response
+  request.open("GET","http://ajmalkassis.imad.hasura-app.io/submit-name?name=" + name,true);
+  request.send(null);
+  
+  request.onreadystatechange=function()
+  {
+      if(request.readyState===XMLHttpRequest.DONE){
+          if(request.status===200){
+              var names=request.responseText;
+              names=JSOn.parse(names);
   var list='';
     for(var i=0;i<names.length;i++)
         list+='<li>' +names[i]+'</li>';
     var ul =document.getElementById("namelist");
-    ul.innerHTML=list;
+    ul.innerHTML=list; 
+          }
+      }
+      
+  }
+ 
+  //should make a request to the server and send the name
+  // capture the response of list containing name and render it to the page
+  
 };
 
 
