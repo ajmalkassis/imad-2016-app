@@ -7,4 +7,7 @@ element.innerHTML="this is the changed text";
 
 //move the img
 var img=document.getElementById("img");
-img.onclick(img.style.marginLeft='100px');
+img.onclick=function()
+{
+    img.style.marginLeft='100px';
+}
