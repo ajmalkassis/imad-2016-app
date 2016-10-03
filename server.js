@@ -59,7 +59,15 @@ var htmlTemplate=`<!DOCTYPE html><html><head><title> ${title}</title>
 };
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-  res.send(createTemplate(article[articleName]));
+    switch(articleName)
+    {
+        case "article-one":break;
+        case "article-two":    break;
+        case "article-three":break;
+        default:
+        res.send("the page is not present");
+    }
+    res.send(createTemplate(article[articleName]));
 });
 
 app.get('/ui/main.js', function (req, res) {
