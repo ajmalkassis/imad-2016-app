@@ -7,18 +7,16 @@ console.log('Loaded!');
 
 //move the img
 var img=document.getElementById("img");
-var marginLeft=0;
+// var marginLeft=0;
 var moveRight=function()
 {
+    var marginLeft=0;
     marginLeft=marginLeft+1;
     img.style.marginLeft=marginLeft+'px';
     
 }
-img.off('click').on('click',function()
+
+img.onclick=function()
 {
     var interval=setInterval(moveRight,50);
-});
-// img.onclick=function()
-// {
-//     var interval=setInterval(moveRight,50);
-// }
+}
