@@ -27,13 +27,14 @@ btn.onclick=function()
 
 var nameInput=document.getElementById("sample");
 var name=nameInput.value;
+var list='';
 var submit=document.getElementById("btn");
 submit.onclick=function()
 {
   //should make a request to the server and send the name
   // capture the response of list containing name and render it to the page
   var names=['name1','name2','name4'];
-  var list='';
+ 
   for(var i=0;i<names.length;i++)
   list+='<li>' +names[i]+'</li>'; 
 };
