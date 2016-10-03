@@ -14,7 +14,7 @@ var content={
     title: "Article-one the first",
     heading: "Article- one",
     date: "Sep 30",
-    content: '<div class="container"><div><a href="/"><h5>Home </h5></a></div><hr/><h3>Article One</h3><p>This text shows the boxy of an html page</p></div>'
+    content: '<p>This text shows the boxy of an html page</p>'
        
 };
 
