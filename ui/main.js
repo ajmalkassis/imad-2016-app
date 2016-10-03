@@ -1,17 +1,28 @@
 console.log('Loaded!');
 
 var btn=document.getElementById("counter");
-var counter=0;
+
 btn.onclick=function()
 {
-  //counter endpoint
-  
+  //create a request object
+  var request=new XMLHttpRequest();
   //capture the response
+  request.open("GET","http://ajmalkassis.imad.hasura-app.io/counter",true);
+  request.send(null);
   
+  request.onreadystatechange=function()
+  {
+      if(request.readyState===XMLHttpRequest.DONE){
+          if(request.status===200){
+               var counter=request.responseText;
+               var sp=document.getElementById("count");
+               sp.innerHTML=counter.toString();
+          }
+      }
+      
+  }
   //render the variable in correct span
-  counter+=1;
-  var sp=document.getElementById("count");
-  sp.innerHTML=counter.toString();
+
 };
 
 // //change the text of help div
