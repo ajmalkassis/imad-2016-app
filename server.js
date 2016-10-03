@@ -8,7 +8,7 @@ var names=[];
 app.get('/submit-name/:name', function(req,res)
 {
     //get the name from req
-    var name=req.param.name;
+    var name=req.params.name;
     names.push(name);
     res.send(JSON.stringify(names));
 });
